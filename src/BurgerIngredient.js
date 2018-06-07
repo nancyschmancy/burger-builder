@@ -11,25 +11,24 @@ class BurgerIngredient extends React.Component {
 
         let ingredient = null;
 
-        // TODO: Prop validation
         switch (this.props.type) {
-            case ('bread-bottom'):
-                ingredient = <div className={classes.BreadBottom} />;
-                break;
-            case ('bread-top'):
-                ingredient = (<div className={classes.BreadTop}>
+            case ('bun-top'):
+                ingredient = (<div className={classes.BunTop}>
                                 <div className={classes.Seeds1} />
                                 <div className={classes.Seeds2} />
-                              </div>);
+                              </div>);``
                 break;
-            case ('meat'):
-                ingredient = <div className={classes.Meat} />;
+            case ('bun-bottom'):
+                ingredient = <div className={classes.BunBottom} />;
+                break;
+            case ('patty'):
+                ingredient = <div className={classes.Patty} />;
                 break;
             case ('cheese'):
                 ingredient = <div className={classes.Cheese} />;
                 break;
-            case ('salad'):
-                ingredient = <div className={classes.Salad} />;
+            case ('lettuce'):
+                ingredient = <div className={classes.Lettuce} />;
                 break;
             case ('bacon'):
                 ingredient = <div className={classes.Bacon} />;
