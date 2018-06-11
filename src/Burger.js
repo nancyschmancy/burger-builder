@@ -7,7 +7,7 @@ const burger = (props) => {
     // The ingredients prop is an object - Object.keys() turns it to:
     // ["lettuce", "bacon", "cheese", "patty"]
     // .map is called to add additional components representing ingredient qty
-    // Array() method creates an array with an integer passed in
+    // Array() method creates an array with an integer passed in and creates that many items
     // reduce() turns array into something else or something?
     let ingredientsArray = Object.keys(props.ingredients);
     let layeredIngredients = ingredientsArray.map(ingredient => {

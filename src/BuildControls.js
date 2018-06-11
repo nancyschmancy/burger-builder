@@ -2,6 +2,7 @@ import React from 'react';
 
 import classes from './BuildControls.css';
 import BuildControl from './BuildControl';
+import OrderSummary from './OrderSummary';
 
 const controls = [
     {label: "Lettuce", type: 'lettuce'},
@@ -12,12 +13,15 @@ const controls = [
 
 const buildControls = (props) => (
     <div className={classes.BuildControls}>
+        <OrderSummary total={props.total}/>
         {controls.map(ctrl => (
             <BuildControl add={() => props.add(ctrl.type)}
                           delete={() => props.delete(ctrl.type)}
                           key={ctrl.label}
-                          label={ctrl.label}/>
+                          label={ctrl.label} hasQty={props.hasQty[ctrl.type]}/>
         ))}
+        <button className={classes.OrderButton} disabled={!props.canOrder}>ORDER NOW</button>
+
     </div>
 
 );
